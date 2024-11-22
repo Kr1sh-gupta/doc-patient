@@ -101,7 +101,7 @@ export default function Layout() {
 
 const styles = StyleSheet.create({
   navItemLabel: {
-    marginLeft: -20,
+    marginLeft: 0,
     fontSize: 18,
   },
   userInfoWrapper: {

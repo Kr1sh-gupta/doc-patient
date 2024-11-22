@@ -11,13 +11,13 @@ const login = () => {
     if (username === 'doctor' || 'Doctor' && password === '1234') {
       Alert.alert('Login Successful', 'Welcome Doctor!');
       router.push({
-        pathname: '/(drawer)/(tabs)/profile',
+        pathname: '/(drawer)/(tabs)/home',
         params: { role: 'doctor' }, 
       });
     } else if (username === 'patient' && password === '5678') {
       Alert.alert('Login Successful', 'Welcome Patient!');
       router.push({
-        pathname: '/(drawer)/(tabs)/profile',
+        pathname: '/(drawer)/(tabs)/home',
         params: { role: 'patient' }, 
       });
     } else {
