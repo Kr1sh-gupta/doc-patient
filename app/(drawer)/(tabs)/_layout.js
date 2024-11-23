@@ -14,6 +14,13 @@ export default function _layout() {
       tabBarLabel: 'Home',
       headerTitle: 'Home'
     }} />
+    <Tabs.Screen name='consult' options={{
+      tabBarIcon: ({color}) => (
+        <AntDesign name="camera" size={24} color={color} />
+      ),
+      tabBarLabel: 'Consult',
+      headerTitle: 'Consult'
+    }} />
     <Tabs.Screen name='profile' options={{
       tabBarIcon: ({color}) => (
         <AntDesign name="user" size={24} color={color} />
