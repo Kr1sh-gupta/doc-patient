@@ -65,7 +65,7 @@ const CustomDrawerContent = (props) => {
         ]}
         style={{ backgroundColor: pathname == "/favourites" ? "#333" : "#fff" }}
         onPress={() => {
-          router.push("/favourites");
+          router.push("/(drawer)/(sidebar)/favourites");
         }}
       />
       <DrawerItem
@@ -83,7 +83,7 @@ const CustomDrawerContent = (props) => {
         ]}
         style={{ backgroundColor: pathname == "/settings" ? "#333" : "#fff" }}
         onPress={() => {
-          router.push("/settings");
+          router.push("/(drawer)/(sidebar)/settings");
         }}
       />
     </DrawerContentScrollView>
@@ -93,8 +93,14 @@ const CustomDrawerContent = (props) => {
 export default function Layout() {
   return (
     <Drawer drawerContent={(props) => <CustomDrawerContent {...props} />} screenOptions={{headerShown: false}}>
-      <Drawer.Screen name="favourites" options={{headerShown: true}} />
-      <Drawer.Screen name="settings" options={{headerShown: true}} />
+     <Drawer.Screen name="(sidebar)/favourites" options={{
+      headerShown: true,
+      title: "My Favourites",
+      }} />
+<Drawer.Screen name="(sidebar)/settings" options={{ 
+      headerShown: true,
+      title: "Settings",
+      }} />
     </Drawer>
   );
 }
